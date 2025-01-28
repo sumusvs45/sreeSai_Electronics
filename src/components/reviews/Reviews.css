@@ -1,0 +1,90 @@
+/* General container */
+.slider-container {
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px; /* Maximum width of the slider */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading style */
+.heading {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Slider styles */
+.slick-slider {
+    position: relative;
+    display: block;
+    width: 100%; /* Ensure slider takes full container width */
+}
+
+.slick-track {
+    display: flex; /* Flex container to hold the slides */
+    align-items: flex-start; /* Align slides to the top */
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 3s ease-in-out; /* Smooth sliding effect */
+}
+
+/* Review card inside slider */
+.review-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Each card should take the full width of its slide */
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out; /* Add smooth hover effect */
+}
+
+/* Profile image style */
+.profileImage {
+    width: 80px;  /* Image width */
+    height: 80px; /* Image height */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Slider navigation buttons */
+.slick-prev,
+.slick-next {
+    font-size: 18px;
+    color: #000;
+    z-index: 1;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .review-card {
+        width: 45%; /* 2 reviews per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        width: 100%; /* 1 review per row on very small screens */
+    }
+}
+
+/* Hover effect for cards */
+.review-card:hover {
+    transform: translateY(-5px); /* Add lift effect on hover */
+}

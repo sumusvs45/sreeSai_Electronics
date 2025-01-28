@@ -1,0 +1,56 @@
+/* src/components/WhyChooseUs.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@300&display=swap');
+
+
+/* WhyChooseUs.css */
+.why-choose-us-container {
+  background: linear-gradient(135deg, #eaf6ff, #ffffff);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+}
+
+.why-choose-us-container h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+}
+
+.why-choose-us-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.why-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.why-item h3 {
+  font-size: 1.25rem;
+  color: #004a99;
+  margin: 15px 0 10px;
+  font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif; /* Use Roboto for paragraphs */
+}
+
+.why-item svg {
+  color: #ffc107;
+  font-size: 3rem;
+  text-align: center;
+}
