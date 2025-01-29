@@ -14,17 +14,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen); // Toggle the dropdown open/close on click
   };
 
   const closeDropdown = () => {
-    setIsOpen(false);
+    setIsOpen(false); // Close the dropdown when the mouse leaves
   };
 
   return (
     <>
-      <header className="fixed w-full h-16 bg-white shadow-md z-50">
-        <nav className="max-w-screen-xl mx-auto px-6 flex justify-between items-center">
+      <header className="fixed top-0 left-0 bg-white w-full  shadow-md z-50 h-16">
+        <nav className="max-w-screen-xl mx-auto px-6 flex justify-between items-center h-full">
           {/* Logo section */}
           <div className="flex items-center space-x-2">
             <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-blue-500">
@@ -38,18 +38,20 @@ const Navbar = () => {
               <Link to="/" className="text-gray-800 hover:text-blue-500 transition-colors duration-300">Home</Link>
             </li>
 
-            <li className="relative"
-                onMouseLeave={closeDropdown}  // Close dropdown when mouse leaves
-            >
-              <Link 
-                to="#" 
-                onClick={toggleDropdown} 
+            <li className="relative">
+              <Link
+                to="#"
+                onClick={toggleDropdown}
                 className="text-gray-800 hover:text-blue-500 transition-colors duration-300"
               >
                 Services
               </Link>
+
               {isOpen && (
-                <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
+                <ul
+                  className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10"
+                  onMouseLeave={closeDropdown} // Close the dropdown when mouse leaves the dropdown
+                >
                   {categories.map((category) => (
                     <li key={category.path}>
                       <Link

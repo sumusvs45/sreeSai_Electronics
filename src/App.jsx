@@ -20,7 +20,6 @@ function App() {
         <Route path="/categories/:categoryname" element={<CategoryPage />} />
 
         {/* <Route path="/user" element={<Account   setToken={setToken}/>}/> */}
-       
         <Route path="/contact-us" element={<ContactForm />} />
       </Routes>
       <Footer />
