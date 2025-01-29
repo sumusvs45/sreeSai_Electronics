@@ -35,6 +35,7 @@ const Carousel = () => {
 
   return (
     <div className="slider-container overflow-hidden mt-11">
+      <h2 className="section__header mb-4">Our Supported dealers..</h2>
       <Slider {...settings}>
         {partnerLogos.map((logo, index) => (
           <div key={uuidv4()} className="flex justify-center items-center p-2">

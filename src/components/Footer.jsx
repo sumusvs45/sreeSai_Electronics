@@ -50,8 +50,8 @@ const Footer = () => {
 
         
         </div>
-        <div className="footer__bar text-center">
-          Copyright @ 2025 by zing.All rights reserved.
+        <div className="footer__bar ">
+          <p className="text-center">Copyright @ 2025 by zing.All rights reserved.</p>
         </div>
       </footer>
     </>

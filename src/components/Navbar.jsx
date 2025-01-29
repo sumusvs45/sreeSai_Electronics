@@ -17,6 +17,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <header className="fixed w-full h-16 bg-white shadow-md z-50">
@@ -34,7 +38,9 @@ const Navbar = () => {
               <Link to="/" className="text-gray-800 hover:text-blue-500 transition-colors duration-300">Home</Link>
             </li>
 
-            <li className="relative">
+            <li className="relative"
+                onMouseLeave={closeDropdown}  // Close dropdown when mouse leaves
+            >
               <Link 
                 to="#" 
                 onClick={toggleDropdown} 

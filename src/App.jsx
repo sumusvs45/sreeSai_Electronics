@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import CategoryPage from "./pages/category/CategoryPage";
 
 import { ToastContainer } from "react-toastify";
-import ForgotPassword from "./components/ForgotPassword";
+
 import ContactForm from "./pages/contactus/ContactForm";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Route path="/categories/:categoryname" element={<CategoryPage />} />
 
         {/* <Route path="/user" element={<Account   setToken={setToken}/>}/> */}
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+       
         <Route path="/contact-us" element={<ContactForm />} />
       </Routes>
       <Footer />

@@ -473,11 +473,16 @@ nav {
 
 .footer__bar {
   padding: 1rem;
-  text-align: center;
+  text-align: center; /* This already centers text horizontally */
+  margin:0 auto;
   font-size: 0.8rem;
   color: var(--text-light);
   border-top: 2px solid var(--extra-light);
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
+
 
 @media (width < 900px) {
   .nav__links {
